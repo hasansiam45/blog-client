@@ -1,24 +1,59 @@
 import logo from './logo.svg';
-import './App.css';
+import Home from './components/Home/Home/Home';
+import Login from './components/Home/Login/Login';
+import Contact from './components/Home/Contact/Contact';
+import Dashboard from './components/Dashboard/Dashboard/Dashboard';
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
+import { createContext, useState } from 'react';
+
+
+export const UserContext = createContext()
+
+
 
 function App() {
+  
+  const [loggedInUser,setLoggedInUser] = useState({})
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    
+    <UserContext.Provider value={[loggedInUser,setLoggedInUser]}>
+     <Router>
+      
+      <Switch>
+      
+        <Route path="/home">
+         <Home></Home>
+        </Route>
+        
+         <Route path="/login">
+         <Login></Login>
+        </Route>
+        
+        <Route path="/dashboard">
+         <Dashboard></Dashboard>
+        </Route>
+        
+        <Route path="/contact">
+         <Contact></Contact>
+        </Route>
+        
+        
+          <Route exact path="/">
+         <Home></Home>
+        </Route>
+      
+      </Switch>
+    
+    </Router>
+    
+    </UserContext.Provider>
+    
   );
 }
 
