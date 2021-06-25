@@ -1,7 +1,6 @@
 import logo from './logo.svg';
 import Home from './components/Home/Home/Home';
 import Login from './components/Home/Login/Login';
-import Contact from './components/Home/Contact/Contact';
 import Dashboard from './components/Dashboard/Dashboard/Dashboard';
 import SingleBlog from './components/Home/SingleBlog/SingleBlog';
 import AddPost from './components/Dashboard/AddPost/AddPost';
@@ -50,11 +49,6 @@ function App() {
            <PrivateRoute path="/managePost">
          <ManagePost></ManagePost>
         </PrivateRoute>
-        
-        <Route path="/contact">
-         <Contact></Contact>
-        </Route>
-        
           
           <Route path="/singleBlog/:id">
          <SingleBlog></SingleBlog>
