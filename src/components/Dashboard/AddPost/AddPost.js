@@ -62,9 +62,9 @@ const AddPost = () => {
                 <h1 className="text-center text-4xl pb-5">Add Your Post here</h1>
              <form className="text-center" onSubmit={handleSubmit(onSubmit)}>
       
-                <input className="p-2 outline-none rounded" placeholder="Your Name" {...register("name", { required: true })} /> <br /> <br />
+                <input className="p-2 outline-none rounded text-black" placeholder="Your Name" {...register("name", { required: true })} /> <br /> <br />
                 
-                <input className="p-2 outline-none rounded" placeholder="Blog Title" {...register("title", { required: true })} /> <br /> <br />
+                <input className="p-2 outline-none rounded text-black" placeholder="Blog Title" {...register("title", { required: true })} /> <br /> <br />
                 
                 <input className="p-2 outline-none rounded" name="image" type="file" onChange={handleImgUpload} /> <br /> <br />
                 

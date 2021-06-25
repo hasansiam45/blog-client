@@ -4,6 +4,9 @@ import Login from './components/Home/Login/Login';
 import Contact from './components/Home/Contact/Contact';
 import Dashboard from './components/Dashboard/Dashboard/Dashboard';
 import SingleBlog from './components/Home/SingleBlog/SingleBlog';
+import AddPost from './components/Dashboard/AddPost/AddPost';
+import ManagePost from './components/Dashboard/ManagePost/ManagePost';
+import PrivateRoute from './components/Home/PrivateRoute/PrivateRoute';
 
 import {
   BrowserRouter as Router,
@@ -36,9 +39,17 @@ function App() {
          <Login></Login>
         </Route>
         
-        <Route path="/dashboard">
+        <PrivateRoute path="/dashboard">
          <Dashboard></Dashboard>
-        </Route>
+        </PrivateRoute>
+
+          <PrivateRoute path="/addPost">
+         <AddPost></AddPost>
+          </PrivateRoute>
+          
+           <PrivateRoute path="/managePost">
+         <ManagePost></ManagePost>
+        </PrivateRoute>
         
         <Route path="/contact">
          <Contact></Contact>

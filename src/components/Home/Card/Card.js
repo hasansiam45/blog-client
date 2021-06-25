@@ -1,6 +1,7 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom'
 
+
 const Card = ({ blog }) => {
     
     const blogText = blog.blog.slice(0, 100)
@@ -17,6 +18,7 @@ const Card = ({ blog }) => {
     
     return (
         
+        <div>
         <div className="card p-5 border-solid border-2 border-light-blue-700">
             <img className="w-full h-32 sm:h-48 object-cover" src={blog.img} alt="" />
             <div className="m-4">
@@ -28,6 +30,8 @@ const Card = ({ blog }) => {
                 <p className="m-3">{blogText}....</p>
                 <button onClick={()=>handleClick(blog._id)} className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">Read More</button>
             </div>
+        </div>
+ 
         </div>
     )
 }
