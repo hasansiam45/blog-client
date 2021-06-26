@@ -18,7 +18,7 @@ const AddPost = () => {
             img: imgUrl
         }
         
-        fetch('http://localhost:5000/addPost', {
+        fetch('https://vast-everglades-60185.herokuapp.com/addPost', {
         
             method: 'POST',
             headers: {

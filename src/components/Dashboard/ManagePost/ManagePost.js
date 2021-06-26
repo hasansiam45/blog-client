@@ -9,7 +9,7 @@ const ManagePost = () => {
     
      useEffect(() => {
         
-        fetch('http://localhost:5000/posts')
+        fetch('https://vast-everglades-60185.herokuapp.com/posts')
             .then(res => res.json())
             .then(data => {
                 console.log(data)
@@ -20,7 +20,7 @@ const ManagePost = () => {
     
     const handleDelete = id => {
     
-    fetch(`http://localhost:5000/delete/${id}`,{
+    fetch(`https://vast-everglades-60185.herokuapp.com/delete/${id}`,{
 
         method: 'DELETE'
     

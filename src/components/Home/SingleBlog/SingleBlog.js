@@ -8,7 +8,7 @@ const SingleBlog = () => {
     const [allBlogs, setAllBlogs] = useState([]);
     
     useEffect(() => {
-            fetch('http://localhost:5000/posts')
+            fetch('https://vast-everglades-60185.herokuapp.com/posts')
             .then(res => res.json())
             .then(data => {
                 setAllBlogs(data)
