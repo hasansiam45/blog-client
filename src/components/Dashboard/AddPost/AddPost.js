@@ -27,9 +27,10 @@ const AddPost = () => {
             body: JSON.stringify(blogPost)
         
         })
-        .then(res=> console.log(res))
+        .then(res=> {
+            alert('Blog added Successfully')
+            console.log(res)})
         
-     
     };
     
     
